@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050818">
+<title>Uma surpresa para um grande herói</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas><canvas id="gl"></canvas><div class="vig"></div>
+<header class="top"><small>UMA SURPRESA PREPARADA COM AMIZADE</small><h1>Preparei uma surpresa especial para ti!</h1></header>
+<button id="snd" aria-label="Ligar ou desligar o som">🔇</button>
+<div class="bar">
+ <div id="chip">Presentes <span id="cnt">0/10</span><i><b id="prog"></b></i></div>
+ <div class="hint" id="hint">Arrasta para girar • toca na caixa para abrir</div>
+ <div class="row"><button id="open">ABRIR A CAIXA</button><button class="ghost" id="letterbtn" style="display:none" disabled>ABRIR A CARTA ✉️</button></div>
+</div>
+<div id="sheet"><small id="sc"></small><h2 id="sn"></h2><p id="sd"></p><blockquote id="sm"></blockquote><button class="ghost" id="sback">‹ VOLTAR À COLEÇÃO</button></div>
+
+<section class="overlay show" id="intro"><div class="box"><small>UMA SURPRESA PARA UM GRANDE HERÓI</small><h2>Tenho uma coisa para ti.</h2><p>Liga o som e toca para começar.</p><button id="start">TOCAR PARA COMEÇAR</button></div></section>
+
+<section class="overlay" id="letterov"><div class="wrap">
+ <div class="env" id="env"><div class="paper"></div><div class="flap"></div><div class="pocket"></div></div>
+ <button id="openl">ABRIR CARTA ✉️</button>
+ <article class="card" id="lcard"><h3>Uma carta para um grande amigo</h3>
+  <p>Meu irmão<span id="ln"></span>,</p>
+  <p>Preparei esta surpresa para te lembrar que a amizade verdadeira merece ser celebrada. Obrigado pelas conversas, pelas brincadeiras, pelos momentos partilhados e pela consideração.</p>
+  <p>Desejo-te muita saúde, força, sucesso e coragem para conquistares tudo aquilo que desejas. Que nunca te faltem oportunidades, pessoas verdadeiras ao teu lado e motivos para sorrir.</p>
+  <p>Continua firme, acredita no teu potencial e nunca desistas dos teus objetivos. Que venham muitas conquistas e momentos inesquecíveis!</p>
+  <p><b>Um grande abraço, parceiro!</b></p><p class="sig" id="from"></p>
+  <div class="row"><button id="tofinal">SURPRESA FINAL ⭐</button><button class="ghost" id="lback">VOLTAR</button></div></article>
+</div></section>
+
+<section class="overlay" id="finalov"><canvas id="fw"></canvas><div class="box fin"><div class="fist"><span>🤜</span><span>🤛</span></div>
+ <p>A amizade verdadeira não precisa de grandes presentes. Precisa de consideração, respeito e momentos que ficam na memória.</p>
+ <p>Continua a ser essa pessoa determinada.</p><h2>O melhor ainda está por vir!</h2><p><b>Forte abraço, parceiro!</b></p>
+ <button class="ghost" id="again">VOLTAR AOS PRESENTES</button></div></section>
+
+<div id="err"><h2>Precisa de internet para o 3D</h2><p>Não foi possível carregar o motor 3D. Liga a internet e abre de novo.</p></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body></html>
